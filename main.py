@@ -7,7 +7,7 @@ print(__name__)
 def home_page():
     return 'Docker based web application'
 
-@app.route('/list/containers')
+@app.route('/list/containers',methods=['GET'])
 def list_docker_containers():
 
     list_of_containers = list_containers()
