@@ -1,8 +1,9 @@
-version: '3.8'
+version: '3.3'
 
 services:
   docker_flask:
     build: .
+    image: dunefro/docker_flask:alpha1
     ports:
      - "5000:5000"
     

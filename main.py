@@ -27,4 +27,4 @@ def list_docker_volumes():
     else:
         return ' No Volumes created yet'
 
-app.run()
+app.run(host='0.0.0.0',port=5000)
