@@ -19,7 +19,10 @@ def list_docker_containers():
     response = ''
     for container in list_of_containers:
         response += '{} ----> {}\n'.format(container.short_id,container.name)
-    return response
+    if response:
+        return response
+    else:
+        return 'No containers created yet'
 
 @app.route('/list/volumes',methods=['GET'])
 def list_docker_volumes():
@@ -30,6 +33,6 @@ def list_docker_volumes():
     if response:
         return response
     else:
-        return ' No Volumes created yet'
+        return 'No Volumes created yet'
 
 app.run(host='0.0.0.0',port=5000)
