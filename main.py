@@ -43,6 +43,6 @@ def list_objects(name):
 
 @app.errorhandler(404)
 def page_not_found(e):
-    return '404.html', 404
+    return 'Api Not suitable\n', 404
 
 app.run(host='0.0.0.0',port=5000)
