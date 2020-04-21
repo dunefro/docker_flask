@@ -41,4 +41,8 @@ def list_objects(name):
     else:
         return 'No {} created yet'.format(name)
 
+@app.errorhandler(404):
+def error():
+    return 'Check the api'
+
 app.run(host='0.0.0.0',port=5000)
