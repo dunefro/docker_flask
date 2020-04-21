@@ -48,12 +48,12 @@ def list_objects(name):
 
     elif name == 'volumes':
         list_of_obj = list_volumes()
-        for volume in list_of_obj:
+        for obj in list_of_obj:
             response += '{}\n'.format(obj.short_id)
 
     elif name == 'containers':
         list_of_obj = list_containers()
-        for container in list_of_obj:
+        for obj in list_of_obj:
             response += '{} ----> {}\n'.format(obj.short_id,obj.name)
 
     else:
