@@ -42,7 +42,7 @@ def list_objects(name):
         return 'No {} created yet'.format(name)
 
 @app.errorhandler(404)
-def error():
-    return 'Check the api'
+def page_not_found(e):
+    return '404.html', 404
 
 app.run(host='0.0.0.0',port=5000)
