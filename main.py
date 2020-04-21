@@ -48,13 +48,14 @@ def list_objects(name):
 
     elif name == 'volumes':
         list_of_obj = list_volumes()
-        for volume in list_of_volumes:
-            response += '{}\n'.format(volume.short_id)
+        for volume in list_of_obj:
+            response += '{}\n'.format(obj.short_id)
 
     elif name == 'containers':
-        for container in list_of_containers:
-            response += '{} ----> {}\n'.format(container.short_id,container.name)
-            
+        list_of_obj = list_containers()
+        for container in list_of_obj:
+            response += '{} ----> {}\n'.format(obj.short_id,obj.name)
+
     else:
         return 'No resource named {}'.format(name)
 
