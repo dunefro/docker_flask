@@ -11,29 +11,6 @@ log_template = '------------------------- {} ----------------------------------'
 def home_page():
     return 'Docker based web application\n'
 
-# @app.route('/list/containers',methods=['GET'])
-# def list_docker_containers():
-
-#     logging.info(log_template.format('Listing Containers') + '\n')
-#     list_of_containers = list_containers()
-#     response = ''
-#     for container in list_of_containers:
-#         response += '{} ----> {}\n'.format(container.short_id,container.name)
-#     if response:
-#         return response
-#     else:
-#         return 'No containers created yet'
-
-# @app.route('/list/volumes',methods=['GET'])
-# def list_docker_volumes():
-#     list_of_volumes = list_volumes()
-#     response = ''
-#     for volume in list_of_volumes:
-#         response += '{}\n'.format(volume.short_id)
-#     if response:
-#         return response
-#     else:
-#         return 'No Volumes created yet'
 
 @app.route('/list/<string:name>',methods=['GET'])
 def list_objects(name):
