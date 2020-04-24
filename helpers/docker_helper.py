@@ -1,7 +1,9 @@
 import docker
 
+#Initialising the docker client here
 client = docker.from_env()
 
+# For listing the containers
 def list_containers():
     list_of_containers = client.containers.list()
     return list_of_containers
