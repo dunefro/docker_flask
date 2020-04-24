@@ -8,6 +8,7 @@ def list_containers():
     list_of_containers = client.containers.list()
     return list_of_containers
 
+# For listing the volumes 
 def list_volumes():
     list_of_volumes = client.volumes.list()
     return list_of_volumes
