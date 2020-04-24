@@ -13,6 +13,7 @@ def list_volumes():
     list_of_volumes = client.volumes.list()
     return list_of_volumes
 
+# For listing the images
 def list_images():
     list_of_images = [ img for img in client.images.list() if img.tags ]
     return list_of_images
