@@ -7,3 +7,4 @@ Flask application for docker commands
 3. Now you will be able to access the API at 5000 port.
 
 Note: Heroku Updates are remaining, repo not fully stable yet
+API list will also be available soon.
