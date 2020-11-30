@@ -1,0 +1,35 @@
+version: '3.3'
+
+services:
+  flask_app_2222:
+    build: .
+    image: dunefro/haproxy:v1
+    ports:
+     - "2222:5000"
+    environment:
+      - PORT_NO=2222
+
+  flask_app_3333:
+    build: .
+    image: dunefro/haproxy:v1
+    ports:
+     - "3333:5000"
+    environment:
+      - PORT_NO=3333
+
+  flask_app_4444:
+    build: .
+    image: dunefro/haproxy:v1
+    ports:
+     - "4444:5000"
+    environment:
+      - PORT_NO=4444
+
+  flask_app_5555:
+    build: .
+    image: dunefro/haproxy:v1
+    ports:
+     - "5555:5000"
+    environment:
+      - PORT_NO=5555
+    
